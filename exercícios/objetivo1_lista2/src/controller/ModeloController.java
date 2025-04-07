@@ -9,8 +9,8 @@ public class ModeloController {
         Modelo modelo2 = new Modelo();
 
         // Crie duas instâncias de cada classe utilizando um construtor parametrizado
-        Modelo modelo3 = new Modelo("");
-        Modelo modelo4 = new Modelo("");
+        Modelo modelo3 = new Modelo("Fusca");
+        Modelo modelo4 = new Modelo("Civic");
 
         // Não possui construtor parametrizado com alterações
 
@@ -21,10 +21,10 @@ public class ModeloController {
         System.out.println(modelo4);
 
         // Utilize os métodos setters para alterar o estado de cada objeto
-        modelo1.setDescricao("");
-        modelo2.setDescricao("");
-        modelo3.setDescricao("");
-        modelo4.setDescricao("");
+        modelo1.setDescricao("Corsa");
+        modelo2.setDescricao("Fiesta");
+        modelo3.setDescricao("Gol");
+        modelo4.setDescricao("Camry");
 
         // Imprima todos objetos com Getters
         System.out.println(modelo1.getDescricao());
@@ -33,3 +33,4 @@ public class ModeloController {
         System.out.println(modelo4.getDescricao());
     }
 }
+

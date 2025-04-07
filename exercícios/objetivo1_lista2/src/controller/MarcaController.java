@@ -9,8 +9,8 @@ public class MarcaController {
         Marca marca2 = new Marca();
 
         // Crie duas instâncias de cada classe utilizando um construtor parametrizado
-        Marca marca3 = new Marca("");
-        Marca marca4 = new Marca("");
+        Marca marca3 = new Marca("Toyota");
+        Marca marca4 = new Marca("Honda");
 
         // Não possui construtor parametrizado com alterações
 
@@ -21,10 +21,10 @@ public class MarcaController {
         System.out.println(marca4);
 
         // Utilize os métodos setters para alterar o estado de cada objeto
-        marca1.setDescricao("");
-        marca2.setDescricao("");
-        marca3.setDescricao("");
-        marca4.setDescricao("");
+        marca1.setDescricao("Chevrolet");
+        marca2.setDescricao("Ford");
+        marca3.setDescricao("Nissan");
+        marca4.setDescricao("BMW");
 
         // Imprima todos objetos com Getters
         System.out.println(marca1.getDescricao());

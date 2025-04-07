@@ -9,12 +9,12 @@ public class AutomovelController {
         Automovel automovel2 = new Automovel();
 
         // Crie duas instâncias de cada classe utilizando um construtor parametrizado
-        Automovel automovel3 = new Automovel("", "", "", 4, "", 0, "", 1000.0);
-        Automovel automovel4 = new Automovel("", "", "", 4, "", 0, "", 1000.0);
+        Automovel automovel3 = new Automovel("1234567890", "ABC1234", "Preto", 4, "Gasolina", 50000, "XYZ987654321", 1200.0);
+        Automovel automovel4 = new Automovel("9876543210", "DEF5678", "Branco", 4, "Álcool", 30000, "ZYX123456789", 1500.0);
 
         // Crie duas instâncias de cada classe utilizando uma variação do construtor parametrizado
-        Automovel automovel5 = new Automovel("", "");
-        Automovel automovel6 = new Automovel("", "");
+        Automovel automovel5 = new Automovel("1122334455", "GHI8901");
+        Automovel automovel6 = new Automovel("9988776655", "JKL2345");
 
         // Imprima todos os objetos criados com os construtores utilizando metodo toString();
         System.out.println(automovel1);
@@ -25,47 +25,47 @@ public class AutomovelController {
         System.out.println(automovel6);
 
         // Utilize os métodos setters para alterar o estado de cada objeto
-        automovel1.setRenavan("");
-        automovel1.setPlaca("");
-        automovel1.setCor("");
+        automovel1.setRenavan("1112223334");
+        automovel1.setPlaca("MNO1234");
+        automovel1.setCor("Azul");
         automovel1.setNum_rodas(4);
-        automovel1.setCombustivel("");
-        automovel1.setQuilometragem(0);
-        automovel1.setChassi("");
+        automovel1.setCombustivel("Diesel");
+        automovel1.setQuilometragem(20000);
+        automovel1.setChassi("ABCD1234567890");
         automovel1.setValor_locacao(1000.0);
 
-        automovel2.setRenavan("");
-        automovel2.setPlaca("");
-        automovel2.setCor("");
+        automovel2.setRenavan("5556667778");
+        automovel2.setPlaca("PQR5678");
+        automovel2.setCor("Vermelho");
         automovel2.setNum_rodas(4);
-        automovel2.setCombustivel("");
-        automovel2.setQuilometragem(0);
-        automovel2.setChassi("");
-        automovel2.setValor_locacao(1000.0);
+        automovel2.setCombustivel("Gasolina");
+        automovel2.setQuilometragem(15000);
+        automovel2.setChassi("EFGH9876543210");
+        automovel2.setValor_locacao(800.0);
 
-        automovel3.setRenavan("");
-        automovel3.setPlaca("");
-        automovel3.setCor("");
+        automovel3.setRenavan("1234567890");
+        automovel3.setPlaca("ABC1234");
+        automovel3.setCor("Preto");
         automovel3.setNum_rodas(4);
-        automovel3.setCombustivel("");
-        automovel3.setQuilometragem(0);
-        automovel3.setChassi("");
-        automovel3.setValor_locacao(1000.0);
+        automovel3.setCombustivel("Gasolina");
+        automovel3.setQuilometragem(50000);
+        automovel3.setChassi("XYZ987654321");
+        automovel3.setValor_locacao(1200.0);
 
-        automovel4.setRenavan("");
-        automovel4.setPlaca("");
-        automovel4.setCor("");
+        automovel4.setRenavan("9876543210");
+        automovel4.setPlaca("DEF5678");
+        automovel4.setCor("Branco");
         automovel4.setNum_rodas(4);
-        automovel4.setCombustivel("");
-        automovel4.setQuilometragem(0);
-        automovel4.setChassi("");
-        automovel4.setValor_locacao(1000.0);
+        automovel4.setCombustivel("Álcool");
+        automovel4.setQuilometragem(30000);
+        automovel4.setChassi("ZYX123456789");
+        automovel4.setValor_locacao(1500.0);
 
-        automovel5.setRenavan("");
-        automovel5.setPlaca("");
+        automovel5.setRenavan("1122334455");
+        automovel5.setPlaca("GHI8901");
 
-        automovel6.setRenavan("");
-        automovel6.setPlaca("");
+        automovel6.setRenavan("9988776655");
+        automovel6.setPlaca("JKL2345");
 
         // Imprima todos objetos com Getters
         System.out.println(automovel1.getRenavan());
