@@ -1,6 +1,7 @@
 package model;
 
 public class Modelo {
+    private int id;
     private String descricao;
 
     // Construtor padrão
@@ -8,16 +9,14 @@ public class Modelo {
     }
 
     // Construtor parametrizado
-    public Modelo(String descricao) {
+    public Modelo(int id, String descricao) {
+        this.id = id;
         this.descricao = descricao;
     }
 
-    // Metodo toString()
-    @Override
-    public String toString() {
-        return "Modelo{" +
-                "descricao='" + descricao + '\'' +
-                '}';
+    // Construtor parametrizado sem alguns atributos
+    public Modelo(String descricao) {
+        this.descricao = descricao;
     }
 
     // Getters e Setters
@@ -27,5 +26,22 @@ public class Modelo {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // Metodo toString()
+    @Override
+    public String toString() {
+        return "Modelo{" +
+                "id=" + id +
+                ", descricao='" + descricao + '\'' +
+                '}';
     }
 }

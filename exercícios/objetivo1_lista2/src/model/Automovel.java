@@ -1,6 +1,7 @@
 package model;
 
 public class Automovel {
+    private int id;
     private String renavan;
     private String placa;
     private String cor;
@@ -15,7 +16,8 @@ public class Automovel {
     }
 
     // Construtor parametrizado
-    public Automovel(String renavan, String placa, String cor, int num_rodas, String combustivel, int quilometragem, String chassi, double valor_locacao) {
+    public Automovel(int id, String renavan, String placa, String cor, int num_rodas, String combustivel, int quilometragem, String chassi, double valor_locacao) {
+        this.id = id;
         this.renavan = renavan;
         this.placa = placa;
         this.cor = cor;
@@ -30,21 +32,6 @@ public class Automovel {
     public Automovel(String placa, String renavan) {
         this.placa = placa;
         this.renavan = renavan;
-    }
-
-    // Metodo toString()
-    @Override
-    public String toString() {
-        return "\nAutomovel{" +
-                "renavan='" + renavan + '\'' +
-                ", placa='" + placa + '\'' +
-                ", cor='" + cor + '\'' +
-                ", num_rodas=" + num_rodas +
-                ", combustivel='" + combustivel + '\'' +
-                ", quilometragem=" + quilometragem +
-                ", chassi='" + chassi + '\'' +
-                ", valor_locacao=" + valor_locacao +
-                '}';
     }
 
     // Getters e Setters
@@ -110,5 +97,29 @@ public class Automovel {
 
     public void setValor_locacao(double valor_locacao) {
         this.valor_locacao = valor_locacao;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // Metodo toString()
+    @Override
+    public String toString() {
+        return "Automovel{" +
+                "id=" + id +
+                ", renavan='" + renavan + '\'' +
+                ", placa='" + placa + '\'' +
+                ", cor='" + cor + '\'' +
+                ", num_rodas=" + num_rodas +
+                ", combustivel='" + combustivel + '\'' +
+                ", quilometragem=" + quilometragem +
+                ", chassi='" + chassi + '\'' +
+                ", valor_locacao=" + valor_locacao +
+                '}';
     }
 }

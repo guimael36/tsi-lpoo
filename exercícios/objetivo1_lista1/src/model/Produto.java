@@ -1,6 +1,7 @@
 package model;
 
 public class Produto {
+    private int id;
     private String nome;
     private String descricao;
     private double valor;
@@ -11,7 +12,8 @@ public class Produto {
     }
 
     // Construtor Parametrizado
-    public Produto (String nome, String descricao, double valor, int estoque){
+    public Produto (int id, String nome, String descricao, double valor, int estoque){
+        this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.valor = valor;
@@ -22,12 +24,6 @@ public class Produto {
     public Produto (String nome, int estoque){
         this.nome = nome;
         this.estoque = estoque;
-    }
-
-    // Converte o objeto em string
-    @Override
-    public String toString(){
-        return ", nome='" + nome + ", descricao='" + descricao + ", valor=" + valor + ", estoque=" + estoque + '}';
     }
 
     // Getters e Setters
@@ -61,5 +57,26 @@ public class Produto {
 
     public void setEstoque(int estoque) {
         this.estoque = estoque;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // Converte o objeto em string
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", valor=" + valor +
+                ", estoque=" + estoque +
+                '}';
     }
 }

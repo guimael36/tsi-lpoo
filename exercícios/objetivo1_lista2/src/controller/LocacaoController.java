@@ -3,6 +3,7 @@ package controller;
 import model.Locacao;
 
 import java.time.LocalDateTime;
+import java.util.*;
 
 public class LocacaoController {
     public static void main(String[] args) {
@@ -12,7 +13,7 @@ public class LocacaoController {
 
         // Crie duas instâncias de cada classe utilizando um construtor parametrizado
         Locacao locacao3 = new Locacao(
-                LocalDateTime.of(2025, 4, 1, 10, 0),
+                1, LocalDateTime.of(2025, 4, 1, 10, 0),
                 LocalDateTime.of(2025, 4, 7, 10, 0),
                 150,
                 500.0,
@@ -20,7 +21,7 @@ public class LocacaoController {
                 false
         );
         Locacao locacao4 = new Locacao(
-                LocalDateTime.of(2025, 4, 5, 14, 0),
+                2, LocalDateTime.of(2025, 4, 5, 14, 0),
                 LocalDateTime.of(2025, 4, 12, 14, 0),
                 200,
                 600.0,
@@ -47,6 +48,7 @@ public class LocacaoController {
         System.out.println(locacao6);
 
         // Utilize os métodos setters para alterar o estado de cada objeto
+        locacao1.setId(1);
         locacao1.setDataHoraLocacao(LocalDateTime.of(2025, 4, 2, 11, 0));
         locacao1.setDataHoraDevolucao(LocalDateTime.of(2025, 4, 9, 11, 0));
         locacao1.setQuilometragem(120);
@@ -54,6 +56,7 @@ public class LocacaoController {
         locacao1.setValor_locacao(310.0);
         locacao1.setDevolucao(false);
 
+        locacao2.setId(2);
         locacao2.setDataHoraLocacao(LocalDateTime.of(2025, 4, 3, 15, 30));
         locacao2.setDataHoraDevolucao(LocalDateTime.of(2025, 4, 10, 15, 30));
         locacao2.setQuilometragem(180);
@@ -61,6 +64,7 @@ public class LocacaoController {
         locacao2.setValor_locacao(280.0);
         locacao2.setDevolucao(false);
 
+        locacao3.setId(3);
         locacao3.setDataHoraLocacao(LocalDateTime.of(2025, 4, 1, 10, 0));
         locacao3.setDataHoraDevolucao(LocalDateTime.of(2025, 4, 7, 10, 0));
         locacao3.setQuilometragem(150);
@@ -68,6 +72,7 @@ public class LocacaoController {
         locacao3.setValor_locacao(300.0);
         locacao3.setDevolucao(false);
 
+        locacao4.setId(4);
         locacao4.setDataHoraLocacao(LocalDateTime.of(2025, 4, 5, 14, 0));
         locacao4.setDataHoraDevolucao(LocalDateTime.of(2025, 4, 12, 14, 0));
         locacao4.setQuilometragem(200);
@@ -90,46 +95,54 @@ public class LocacaoController {
         locacao6.setDevolucao(false);
 
         // Imprima todos objetos com Getters
-        System.out.println(locacao1.getDataHoraLocacao());
-        System.out.println(locacao1.getDataHoraDevolucao());
-        System.out.println(locacao1.getQuilometragem());
-        System.out.println(locacao1.getValor_caucao());
-        System.out.println(locacao1.getValor_locacao());
-        System.out.println(locacao1.getDevolucao());
+        System.out.println("Id: " + locacao1.getId());
+        System.out.println("Data/Hora Locacao: " + locacao1.getDataHoraLocacao());
+        System.out.println("Data/Hora Devolucao: " + locacao1.getDataHoraDevolucao());
+        System.out.println("Quilometragem: " + locacao1.getQuilometragem());
+        System.out.println("Valor Caucao: " + locacao1.getValor_caucao());
+        System.out.println("Valor Locacao: " + locacao1.getValor_locacao());
+        System.out.println("Devolucao: " + locacao1.getDevolucao());
 
-        System.out.println(locacao2.getDataHoraLocacao());
-        System.out.println(locacao2.getDataHoraDevolucao());
-        System.out.println(locacao2.getQuilometragem());
-        System.out.println(locacao2.getValor_caucao());
-        System.out.println(locacao2.getValor_locacao());
-        System.out.println(locacao2.getDevolucao());
+        System.out.println("Id: " + locacao2.getId());
+        System.out.println("Data/Hora Locacao: " + locacao2.getDataHoraLocacao());
+        System.out.println("Data/Hora Devolucao: " + locacao2.getDataHoraDevolucao());
+        System.out.println("Quilometragem: " + locacao2.getQuilometragem());
+        System.out.println("Valor Caucao: " + locacao2.getValor_caucao());
+        System.out.println("Valor Locacao: " + locacao2.getValor_locacao());
+        System.out.println("Devolucao: " + locacao2.getDevolucao());
 
-        System.out.println(locacao3.getDataHoraLocacao());
-        System.out.println(locacao3.getDataHoraDevolucao());
-        System.out.println(locacao3.getQuilometragem());
-        System.out.println(locacao3.getValor_caucao());
-        System.out.println(locacao3.getValor_locacao());
-        System.out.println(locacao3.getDevolucao());
+        System.out.println("Id: " + locacao3.getId());
+        System.out.println("Data/Hora Locacao: " + locacao3.getDataHoraLocacao());
+        System.out.println("Data/Hora Devolucao: " + locacao3.getDataHoraDevolucao());
+        System.out.println("Quilometragem: " + locacao3.getQuilometragem());
+        System.out.println("Valor Caucao: " + locacao3.getValor_caucao());
+        System.out.println("Valor Locacao: " + locacao3.getValor_locacao());
+        System.out.println("Devolucao: " + locacao3.getDevolucao());
 
-        System.out.println(locacao4.getDataHoraLocacao());
-        System.out.println(locacao4.getDataHoraDevolucao());
-        System.out.println(locacao4.getQuilometragem());
-        System.out.println(locacao4.getValor_caucao());
-        System.out.println(locacao4.getValor_locacao());
-        System.out.println(locacao4.getDevolucao());
+        System.out.println("Id: " + locacao4.getId());
+        System.out.println("Data/Hora Locacao: " + locacao4.getDataHoraLocacao());
+        System.out.println("Data/Hora Devolucao: " + locacao4.getDataHoraDevolucao());
+        System.out.println("Quilometragem: " + locacao4.getQuilometragem());
+        System.out.println("Valor Caucao: " + locacao4.getValor_caucao());
+        System.out.println("Valor Locacao: " + locacao4.getValor_locacao());
+        System.out.println("Devolucao: " + locacao4.getDevolucao());
 
-        System.out.println(locacao5.getDataHoraLocacao());
-        System.out.println(locacao5.getDataHoraDevolucao());
-        System.out.println(locacao5.getQuilometragem());
-        System.out.println(locacao5.getValor_caucao());
-        System.out.println(locacao5.getValor_locacao());
-        System.out.println(locacao5.getDevolucao());
+        System.out.println("Data/Hora Locacao: " + locacao5.getDataHoraLocacao());
+        System.out.println("Data/Hora Devolucao: " + locacao5.getDataHoraDevolucao());
+        System.out.println("Quilometragem: " + locacao5.getQuilometragem());
+        System.out.println("Valor Caucao: " + locacao5.getValor_caucao());
+        System.out.println("Valor Locacao: " + locacao5.getValor_locacao());
+        System.out.println("Devolucao: " + locacao5.getDevolucao());
 
-        System.out.println(locacao6.getDataHoraLocacao());
-        System.out.println(locacao6.getDataHoraDevolucao());
-        System.out.println(locacao6.getQuilometragem());
-        System.out.println(locacao6.getValor_caucao());
-        System.out.println(locacao6.getValor_locacao());
-        System.out.println(locacao6.getDevolucao());
+        System.out.println("Data/Hora Locacao: " + locacao6.getDataHoraLocacao());
+        System.out.println("Data/Hora Devolucao: " + locacao6.getDataHoraDevolucao());
+        System.out.println("Quilometragem: " + locacao6.getQuilometragem());
+        System.out.println("Valor Caucao: " + locacao6.getValor_caucao());
+        System.out.println("Valor Locacao: " + locacao6.getValor_locacao());
+        System.out.println("Devolucao: " + locacao6.getDevolucao());
+
+        // Adicione dois objetos do tipo coleção, um List e um Map
+        List<Locacao> locacaoLista = new ArrayList<>();
+        Map<Locacao, Integer> locacaoMapa = new HashMap<>();
     }
 }

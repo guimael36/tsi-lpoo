@@ -1,6 +1,7 @@
 package model;
 
 public class Funcionario {
+    private int id;
     private String nome;
     private double salario;
 
@@ -9,7 +10,8 @@ public class Funcionario {
     }
 
     // Construtor Parametrizado
-    public Funcionario(String nome, double salario) {
+    public Funcionario(int id, String nome, double salario) {
+        this.id = id;
         this.nome = nome;
         this.salario = salario;
     }
@@ -17,12 +19,6 @@ public class Funcionario {
     // Construtor Parametrizado sem alguns itens
     public Funcionario(String nome) {
         this.nome = nome;
-    }
-
-    // Converte o objeto em string
-    @Override
-    public String toString() {
-        return "Funcionario [nome=" + nome + ", salario=" + salario + "]";
     }
 
     // Getters e Setters
@@ -40,5 +36,24 @@ public class Funcionario {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    // Converte o objeto em string
+
+    @Override
+    public String toString() {
+        return "Funcionario{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", salario=" + salario +
+                '}';
     }
 }

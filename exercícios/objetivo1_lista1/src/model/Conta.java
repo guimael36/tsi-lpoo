@@ -1,6 +1,7 @@
 package model;
 
 public class Conta {
+    private int id;
     private double saldo;
 
     // Construtor padrão
@@ -8,6 +9,12 @@ public class Conta {
     }
 
     // Construtor Parametrizado
+    public Conta(int id, double saldo){
+        this.id = id;
+        this.saldo = saldo;
+    }
+
+    // Construtor parametrizado sem alguns atributos
     public Conta(double saldo){
         this.saldo = saldo;
     }
@@ -32,12 +39,6 @@ public class Conta {
         System.out.println("Saldo atualizado pela taxa. Saldo atual=" + this.saldo);
     }
 
-    // Converte o objeto em string
-    @Override
-    public String toString() {
-        return "Saldo: [saldo=" + saldo + "]";
-    }
-
     // Getters e Setters
     public double getSaldo() {
         return saldo;
@@ -45,5 +46,22 @@ public class Conta {
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // Converte o objeto em string
+    @Override
+    public String toString() {
+        return "Conta{" +
+                "id=" + id +
+                ", saldo=" + saldo +
+                '}';
     }
 }

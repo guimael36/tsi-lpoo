@@ -3,6 +3,7 @@ package model;
 import java.time.LocalDateTime;
 
 public class Locacao {
+    private int id;
     private LocalDateTime dataHoraLocacao;
     private LocalDateTime dataHoraDevolucao;
     private int quilometragem;
@@ -15,7 +16,8 @@ public class Locacao {
     }
 
     // Construtor parametrizado
-    public Locacao(LocalDateTime dataHoraLocacao, LocalDateTime dataHoraDevolucao, int quilometragem, double valor_caucao, double valor_locacao, boolean devolucao) {
+    public Locacao(int id, LocalDateTime dataHoraLocacao, LocalDateTime dataHoraDevolucao, int quilometragem, double valor_caucao, double valor_locacao, boolean devolucao) {
+        this.id = id;
         this.dataHoraLocacao = dataHoraLocacao;
         this.dataHoraDevolucao = dataHoraDevolucao;
         this.quilometragem = quilometragem;
@@ -28,19 +30,6 @@ public class Locacao {
     public Locacao(LocalDateTime dataHoraLocacao, LocalDateTime dataHoraDevolucao) {
         this.dataHoraLocacao = dataHoraLocacao;
         this.dataHoraDevolucao = dataHoraDevolucao;
-    }
-
-    // Metodo toString()
-    @Override
-    public String toString() {
-        return "\nLocacao{" +
-                "dataHoraLocacao=" + dataHoraLocacao +
-                ", dataHoraDevolucao=" + dataHoraDevolucao +
-                ", quilometragem=" + quilometragem +
-                ", valor_caucao=" + valor_caucao +
-                ", valor_locacao=" + valor_locacao +
-                ", devolucao=" + devolucao +
-                '}';
     }
 
     // Getters e Setters
@@ -90,5 +79,27 @@ public class Locacao {
 
     public void setDevolucao(boolean devolucao) {
         this.devolucao = devolucao;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // Metodo toString()
+    @Override
+    public String toString() {
+        return "Locacao{" +
+                "id=" + id +
+                ", dataHoraLocacao=" + dataHoraLocacao +
+                ", dataHoraDevolucao=" + dataHoraDevolucao +
+                ", quilometragem=" + quilometragem +
+                ", valor_caucao=" + valor_caucao +
+                ", valor_locacao=" + valor_locacao +
+                ", devolucao=" + devolucao +
+                '}';
     }
 }

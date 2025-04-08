@@ -1,6 +1,7 @@
 package model;
 
 public class Cliente {
+    private int id;
     private String cpf;
     private String nome;
     private String sobrenome;
@@ -13,7 +14,8 @@ public class Cliente {
     }
 
     // Construtor parametrizado
-    public Cliente(String cpf, String nome, String sobrenome, String endereco, String telefone, String email) {
+    public Cliente(int id, String cpf, String nome, String sobrenome, String endereco, String telefone, String email) {
+        this.id = id;
         this.cpf = cpf;
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -26,19 +28,6 @@ public class Cliente {
     public Cliente(String cpf, String nome) {
         this.cpf = cpf;
         this.nome = nome;
-    }
-
-    // Metodo toString()
-    @Override
-    public String toString() {
-        return "\nCliente{" +
-                "cpf='" + cpf + '\'' +
-                ", nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
-                ", endereco='" + endereco + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", email='" + email + '\'' +
-                '}';
     }
 
     // Getters e Setters
@@ -88,5 +77,27 @@ public class Cliente {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // Metodo toString()
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", cpf='" + cpf + '\'' +
+                ", nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", endereco='" + endereco + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
