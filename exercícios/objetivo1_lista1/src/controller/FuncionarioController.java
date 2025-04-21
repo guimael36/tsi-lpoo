@@ -83,7 +83,7 @@ public class FuncionarioController {
         funcionarioList.add(funcionario6);
 
         // Imprimindo a coleção
-        System.out.println(funcionarioList.toString());
+        System.out.println(funcionarioList);
 
         // Ordene a coleção em ordem decrescente, pelo critério id, e a imprima;
         funcionarioList.sort(Comparator.comparing(Funcionario::getId).reversed());
@@ -91,7 +91,7 @@ public class FuncionarioController {
 
         // Faça uma pesquisa por força bruta na coleção e retorne o objeto de id = 3;
         for (Funcionario funcionario1 : funcionarioList) {
-            if(3 == funcionario1.getId()) {
+            if (3 == funcionario1.getId()) {
                 System.out.println(funcionario1);
                 break;
             }
@@ -126,5 +126,26 @@ public class FuncionarioController {
 
         // Pesquisa na coleção pelo ID
         System.out.println(funcionarioMap.get(funcionario3.getId()));
+
+    /*
+    Como saber se dois objetos são iguais?
+    Uso dos métodos equals e do hashCode.
+    O equals serve para comparar dois objetos.
+    O hashCode é uma propriedade que identifica o objeto de forma inequívoca.
+    O hashCode e o equals podem ser implementados na classe, variando a chave que identifica o objeto.
+    */
+
+        Funcionario tf1 = new Funcionario(21, "Ana", 21000.00);
+        Funcionario tf2 = new Funcionario(21, "Ana", 21000.00);
+
+        if (tf1.equals(tf2)) {
+            System.out.println("tf1 = tf2");
+            System.out.println(tf1.hashCode());
+            System.out.println(tf2.hashCode());
+        } else {
+            System.out.println("tf1 != tf2");
+            System.out.println(tf1.hashCode());
+            System.out.println(tf2.hashCode());
+        }
     }
 }

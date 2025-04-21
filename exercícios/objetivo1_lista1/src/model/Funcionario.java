@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Funcionario {
     private int id;
     private String nome;
@@ -54,5 +56,18 @@ public class Funcionario {
                 ", nome='" + nome + '\'' +
                 ", salario=" + salario +
                 '}';
+    }
+
+    // Generate do Equals e Hashcode
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Funcionario that = (Funcionario) o;
+        return id == that.id && Double.compare(salario, that.salario) == 0 && Objects.equals(nome, that.nome);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nome, salario);
     }
 }
