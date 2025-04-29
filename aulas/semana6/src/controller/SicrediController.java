@@ -1,7 +1,6 @@
 package controller;
 
 import model.Cliente;
-import model.Funcionario;
 import model.Gerente;
 
 public class SicrediController {
