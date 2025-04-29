@@ -15,22 +15,6 @@ public class Cliente implements Investidor {
         this.QdeCotas = QdeCotas;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
-    }
-
     @Override
     public String getTicker() {
         return ticker;
@@ -58,6 +42,6 @@ public class Cliente implements Investidor {
                 ", sobrenome='" + sobrenome + '\'' +
                 ", ticker='" + ticker + '\'' +
                 ", QdeCotas=" + QdeCotas +
-                '}';
+                '}' + "\n";
     }
 }

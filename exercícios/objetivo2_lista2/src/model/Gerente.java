@@ -21,22 +21,22 @@ public class Gerente extends Funcionario implements Investidor {
 
     @Override
     public String getTicker() {
-        return "";
+        return this.ticker;
     }
 
     @Override
     public void setTicker(String ticker) {
-
+        this.ticker = ticker;
     }
 
     @Override
     public int getQdeCotas() {
-        return QdeCotas;
+        return this.QdeCotas;
     }
 
     @Override
     public void setQdeCotas(int qdeCotas) {
-
+        this.QdeCotas = qdeCotas;
     }
 
     @Override
@@ -46,6 +46,6 @@ public class Gerente extends Funcionario implements Investidor {
                 ", salario=" + salario +
                 ", ticker='" + ticker + '\'' +
                 ", QdeCotas=" + QdeCotas +
-                '}';
+                '}' + "\n";
     }
 }

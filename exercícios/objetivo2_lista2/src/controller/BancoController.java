@@ -23,8 +23,8 @@ public class BancoController {
         Gerente g2 = new Gerente("Bruce", 5000.00, "BRU", 200);
         Gerente g3 = new Gerente("Carlota", 5000.00, "CAR", 300);
         Gerente g4 = new Gerente("Dado", 7000.00, "DAD", 400);
-        Gerente g5 = new Gerente("Feliz", 8000.00, "FEL", 800);
-        Gerente g6 = new Gerente("Godofredo", 9000.00, "GOD", 600);
+        Gerente g5 = new Gerente("Feliz", 9000.00, "FEL", 800);
+        Gerente g6 = new Gerente("Godofredo", 9000.00, "GOD", 800);
 
         System.out.println("Clientes:");
         System.out.println(c1);
@@ -51,34 +51,10 @@ public class BancoController {
         System.out.println(g6);
 
         // d) Crie coleções
-        List<Cliente> Clientes = new ArrayList<>();
-        List<Desenvolvedor> Desenvolvedores = new ArrayList<>();
-        List<Gerente> Gerentes = new ArrayList<>();
-        List<Investidor> Investidores = new ArrayList<>();
+        List<Investidor> Investidores = new ArrayList<>(); // se criam coleções apenas para os itens mais abstratos
         List<Funcionario> Funcionarios = new ArrayList<>();
 
         // e) Insira os objetos nas coleções. Imprima estas coleções.
-        Clientes.add(c1);
-        Clientes.add(c2);
-        Clientes.add(c3);
-        Clientes.add(c4);
-        Clientes.add(c5);
-        Clientes.add(c6);
-
-        Desenvolvedores.add(d1);
-        Desenvolvedores.add(d2);
-        Desenvolvedores.add(d3);
-        Desenvolvedores.add(d4);
-        Desenvolvedores.add(d5);
-        Desenvolvedores.add(d6);
-
-        Gerentes.add(g1);
-        Gerentes.add(g2);
-        Gerentes.add(g3);
-        Gerentes.add(g4);
-        Gerentes.add(g5);
-        Gerentes.add(g6);
-
         Investidores.add(c1);
         Investidores.add(c2);
         Investidores.add(c3);
@@ -105,68 +81,59 @@ public class BancoController {
         Funcionarios.add(d5);
         Funcionarios.add(d6);
 
-        System.out.println("\nImpressão da coleção Clientes: ");
-        for (Cliente c : Clientes) {
-            System.out.println(c);
-        }
+        System.out.println("\nInvestidores:");
+        System.out.println(Investidores);
 
-        System.out.println("\nImpressão da coleção Desenvolvedores: ");
-        for (Desenvolvedor d : Desenvolvedores) {
-            System.out.println(d);
-        }
-
-        System.out.println("\nImpressão da coleção Gerentes: ");
-        for (Gerente g : Gerentes) {
-            System.out.println(g);
-        }
-
-        System.out.println("\nImpressão da coleção Investidores: ");
-        for (Investidor i : Investidores) {
-            System.out.println(i);
-        }
-
-        System.out.println("\nImpressão da coleção Funcionários: ");
-        for (Funcionario f : Funcionarios){
-            System.out.println(f);
-        }
+        System.out.println("\nFuncionarios:");
+        System.out.println(Funcionarios);
 
         // f) liste todos os funcionários cadastrados, ordenando-os pelo salário, em ordem decrescente;
         System.out.println("\nImpressão da coleção Funcionários ordenados pelo salário, em ordem decrescente: ");
-        Funcionarios.sort(Comparator.comparingDouble(Funcionario::getSalario).reversed());
-        for (Funcionario f : Funcionarios) {
-            System.out.println(f);
-        }
+        Funcionarios
+                .sort(Comparator.comparing(Funcionario::getSalario)
+                        .reversed());
+        System.out.println(Funcionarios);
 
         // g) Liste todos os clientes cadastrados, ordenando-os pela quantidade de cotas, em ordem decrescente;
         System.out.println("\nImpressão de todos os clientes cadastrados, ordenando-os pela quantidade de cotas, em ordem decrescente:");
-        Clientes.sort(Comparator.comparingInt(Cliente::getQdeCotas).reversed());
-        for (Cliente c : Clientes) {
-            System.out.println(c);
+        Investidores
+                .sort(Comparator.comparing(Investidor::getQdeCotas)
+                        .reversed());
+        for (Investidor i : Investidores) {
+            if(i instanceof Cliente){ // faz o filtro para buscar somente instâncias da classe Clientes
+                System.out.println(i);
+            }
         }
 
         // h) A partir das coleções criadas, liste todos os investidores cadastrados, ordenando-os pela quantidade de cotas, em ordem decrescente;
         System.out.println("\nImpressão dos investidores cadastrados, ordenados pela quantidade de cotas, em ordem decrescente: ");
-        Investidores.sort(Comparator.comparing(Investidor::getQdeCotas).reversed());
-        for (Investidor i : Investidores) {
-            System.out.println(i);
-        }
+        Investidores
+                .sort(Comparator.comparing(Investidor::getQdeCotas)
+                        .reversed());
+        System.out.println(Investidores);
 
-        //i) A partir das coleções criadas, faça a aplicação imprimir o funcionário com o maior salário;
+        //i) A partir das coleções criadas, faça a aplicação imprimir os funcionários com o maior salário;
         System.out.println("\nImpressão dos funcionários com o maior salário:");
-        Funcionario f_maior_salario = Collections.max(Funcionarios, Comparator.comparing(Funcionario::getSalario)); // primeiro determina o maior
+        Funcionario maiorSalario =
+                Collections
+                .max(Funcionarios, Comparator.comparing(Funcionario::getSalario)); // primeiro determina o maior
         for (Funcionario f : Funcionarios) {
-            if(f.getSalario() >= f_maior_salario.getSalario()) { // compara com o maior objeto da coleção
+            if(f.getSalario() >= maiorSalario.getSalario()) { // compara com o maior objeto da coleção
                 System.out.print(f);
             }
         }
 
-        //j) A partir das coleções criadas, faça a aplicação imprimir o investidor com o maior número de cotas.
-        System.out.println("\n\nImpressão dos investidores com o maior número de cotas:");
-        Investidor i_maior_quantidade_acoes = Collections.max(Investidores, Comparator.comparing(Investidor::getQdeCotas)); // determina o maior número
-            for (Investidor i : Investidores) {
-                if (i.getQdeCotas() >= i_maior_quantidade_acoes.getQdeCotas()) { // compara com o maior objeto da coleção
-                    System.out.print(i);
-                }
+        //j) A partir das coleções criadas, faça a aplicação imprimir os investidores com o maior número de cotas.
+        System.out.println("\nImpressão dos investidores com o maior número de cotas: ");
+        Investidor maiorCotasCollections =
+                Collections
+                        .max(Investidores, Comparator.comparing(Investidor::getQdeCotas));
+
+        for (Investidor i : Investidores) {
+            if(i.getQdeCotas() == maiorCotasCollections.getQdeCotas()){
+                System.out.println(i);
             }
+        }
     }
 }
+

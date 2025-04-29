@@ -4,9 +4,7 @@ public abstract class Funcionario {
     protected String nome;
     protected double salario;
 
-    public Funcionario(){
-
-    }
+    public Funcionario(){}
 
     public Funcionario(String nome, double salario) {
         this.nome = nome;
@@ -30,12 +28,4 @@ public abstract class Funcionario {
     }
 
     public abstract double getBonus();
-
-    @Override
-    public String toString() {
-        return "Funcionario{" +
-                "nome='" + nome + '\'' +
-                ", salario=" + salario +
-                '}';
-    }
 }
