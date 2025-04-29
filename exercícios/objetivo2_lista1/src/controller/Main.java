@@ -23,21 +23,11 @@ public class Main {
         // 1e
         d1.setNome("\nAna");
         d1.setSalario(2000.00);
-        d2.setNome("\nBruna");
-        d2.setSalario(2500.00);
         g1.setNome("\nMateus");
         g1.setSalario(3500.00);
-        g2.setNome("\nMirella");
-        g2.setSalario(5000.00);
 
-        System.out.println(d1.getNome());
-        System.out.println(d1.getSalario());
-        System.out.println(d2.getNome());
-        System.out.println(d2.getSalario());
-        System.out.println(g1.getNome());
-        System.out.println(g1.getSalario());
-        System.out.println(g2.getNome());
-        System.out.println(g2.getSalario());
+        System.out.println(d1);
+        System.out.println(g1);
 
         //1f. Faça o programa retornar o bônus de cada um dos funcionários, seguindo a seguinte regra: para Gerente = 20%, e para Desenvolvedor = 5%. Imprima-os
         System.out.print("\nBônus de cada funcionário: \n");
@@ -136,7 +126,7 @@ public class Main {
         //2f. Calcule e imprima a nova folha salarial dessa empresa, caso todos os funcionários, independente de cargo, tenham um reajuste salarial de 5%.
         total_folha_com_bonus = 0.0;
         for(Funcionario f : funcionarios){
-            f.setSalario(f.getSalario() + (f.getSalario() * 0.05));
+            f.setSalario(f.getSalario() * 1.05);
             total_folha_com_bonus += f.getSalario() + f.getBonus();
         }
         System.out.println("\n\nTotal da nova folha com reajuste salarial de 5%:");

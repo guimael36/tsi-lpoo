@@ -1,6 +1,6 @@
 package controller;
-import model.*;
 import java.util.*;
+import model.*;
 
 public class BancoController {
     public static void main(String[] args) {
