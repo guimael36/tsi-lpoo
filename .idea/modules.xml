@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/exercícios/objetivo2_lista1/objetivo2_lista1.iml" filepath="$PROJECT_DIR$/exercícios/objetivo2_lista1/objetivo2_lista1.iml" />
       <module fileurl="file://$PROJECT_DIR$/exercícios/objetivo2_lista2/objetivo2_lista2.iml" filepath="$PROJECT_DIR$/exercícios/objetivo2_lista2/objetivo2_lista2.iml" />
       <module fileurl="file://$PROJECT_DIR$/exercícios/objetivo2_lista3/objetivo2_lista3.iml" filepath="$PROJECT_DIR$/exercícios/objetivo2_lista3/objetivo2_lista3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercícios/objetivo3_lista1/objetivo3_lista1.iml" filepath="$PROJECT_DIR$/exercícios/objetivo3_lista1/objetivo3_lista1.iml" />
       <module fileurl="file://$PROJECT_DIR$/exercícios/objetivos1e2_preparatorio/objetivos1e2_preparatorio.iml" filepath="$PROJECT_DIR$/exercícios/objetivos1e2_preparatorio/objetivos1e2_preparatorio.iml" />
       <module fileurl="file://$PROJECT_DIR$/aulas/semana1/semana1.iml" filepath="$PROJECT_DIR$/aulas/semana1/semana1.iml" />
       <module fileurl="file://$PROJECT_DIR$/aulas/semana2/semana2.iml" filepath="$PROJECT_DIR$/aulas/semana2/semana2.iml" />
@@ -15,6 +16,8 @@
       <module fileurl="file://$PROJECT_DIR$/aulas/semana5/semana5.iml" filepath="$PROJECT_DIR$/aulas/semana5/semana5.iml" />
       <module fileurl="file://$PROJECT_DIR$/aulas/semana6/semana6.iml" filepath="$PROJECT_DIR$/aulas/semana6/semana6.iml" />
       <module fileurl="file://$PROJECT_DIR$/aulas/semana7/semana7.iml" filepath="$PROJECT_DIR$/aulas/semana7/semana7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aulas/semana8/semana8.iml" filepath="$PROJECT_DIR$/aulas/semana8/semana8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aulas/semana9/semana9.iml" filepath="$PROJECT_DIR$/aulas/semana9/semana9.iml" />
     </modules>
   </component>
 </project>
