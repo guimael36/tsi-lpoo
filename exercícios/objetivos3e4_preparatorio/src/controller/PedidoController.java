@@ -1,5 +1,6 @@
 package controller;
 
+import exception.EstoqueInsuficiente;
 import model.*;
 
 import java.math.BigDecimal;
@@ -36,7 +37,11 @@ public class PedidoController {
                 carrinho);
 
         //Baixar o estoque de Produto;
-        Produto.baixarEstoque(carrinho);
+        try {
+            Produto.baixarEstoque(carrinho);
+        } catch (EstoqueInsuficiente e) {
+            System.out.println(e.getMessage());
+        }
 
         //Imprimir o Pedido com seus detalhes
         System.out.println(pedido1);
@@ -51,7 +56,13 @@ public class PedidoController {
         for(Item item : carrinho) {
             totalPedido = totalPedido.add(item.getTotal());
         }
-        Produto.baixarEstoque(carrinho);
+
+        try {
+            Produto.baixarEstoque(carrinho);
+        } catch (EstoqueInsuficiente e) {
+            System.out.println(e.getMessage());
+        }
+
         Pedido pedido2 = new Pedido(
                 "222",
                 LocalDateTime.now(),

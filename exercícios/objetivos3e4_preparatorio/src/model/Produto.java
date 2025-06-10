@@ -84,19 +84,16 @@ public class Produto {
         this.forncedor = forncedor;
     }
 
-    public static void baixarEstoque(List<Item> itens){
-        itens.forEach(i -> {
-            if(i.getProduto().getEstoque() >= i.getQuantidade()) { //se tem estoque faz a baixa
-                i.getProduto().setEstoque(i.getProduto().getEstoque() - i.getQuantidade());
-            }else {
-                try {
-                    throw new EstoqueInsuficiente("Estoque insuficiente");
-                } catch (EstoqueInsuficiente e) {
-                    throw new RuntimeException(e);
-                }
+    public static void baixarEstoque(List<Item> itens) throws EstoqueInsuficiente {
+        for (Item item : itens) {
+            Produto produto = item.getProduto();
+            if (produto.getEstoque() < item.getQuantidade()) {
+                throw new EstoqueInsuficiente("Estoque insuficiente para " + produto.getNome());
             }
-        });
+            produto.setEstoque(produto.getEstoque() - item.getQuantidade());
+        }
     }
+
 
     @Override
     public String toString() {
